@@ -6,16 +6,24 @@
 //  Copyright © 2018 Thomas Fauquemberg. All rights reserved.
 //
 
+// 6bf06b7a537c129fe359973f4cdc31f5
+
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var tintColor: UIColor = .red
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        window = UIWindow()
+        window?.tintColor = tintColor
+        window?.makeKeyAndVisible()
+        window?.rootViewController = MainTabBarController()
+        
         return true
     }
 
